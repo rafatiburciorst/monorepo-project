@@ -3,7 +3,8 @@ import fastify from "fastify";
 const app = fastify();
 
 app.get("/api/hello", async (request, reply) => {
-	return { message: "Hello from Fastify!" };
+	console.log("backend");
+	return reply.send({ message: "Hello from Fastify!" });
 });
 
 const start = async () => {
